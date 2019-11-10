@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE logView SYSTEM "logView.dtd">
+
+<logView>
+<display>
+   <timeAxis start="0" end="10" xSize="40"/>
+   <processAxis ySize="35"/>
+   <window  xSize="1000" ySize="600"/>
+   <process id="0" name="Coordinator" display="true"/>    
+   <messages type="SHUTDOWN" color="#cc00ff"/>
+   <messages type="SYNC" color="#ff0000"/>
+   <label halign="left" valign="top" distance="30" percent="0.7"/>
+</display>
+
+<file>
+    <printer filename="example.ps"/>    
+    <log filename="example.log"/>
+</file>
+</logView>

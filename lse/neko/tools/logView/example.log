@@ -1,0 +1,8 @@
+0.000 e p0 sa p0 p1,p2 SYNC hello 
+1.000 e p1 ra p0 p1,p2 SYNC hello 
+9.000 e p2 ra p0 p1,p2 SYNC hello 
+5.000 e p3 sf p3 p1,p2,p4 SHUTDOWN bye 
+6.000 e p4 rf p3 p1,p2,p4 SHUTDOWN bye 
+6.000 e p1 rf p3 p1,p2,p4 SHUTDOWN bye 
+4.000 e p2 rf p3 p1,p2,p4 SHUTDOWN bye 
+8.500 e p4 rf p3 p1,p2,p4 SHUTDOWN bye

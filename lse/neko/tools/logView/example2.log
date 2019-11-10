@@ -1,0 +1,8 @@
+31.000 e p1 r p0 p1 1225 null
+32.000 e p2 r p0 p2 1225 null
+32.000 e p3 r p0 p3 1225 null
+33.000 e p4 r p0 p4 1225 null
+33.000 e p1 r p2 p1 1225 null
+33.000 e p8 r p0 p8 1225 null
+100.575 e p1 s p1 p0 EVENTS EventsOnWire(time=1633.927, Event(send1,0,1626.477), Event(ack1,0,1630.784))
+105.125 e p0 r p1 p0 EVENTS EventsOnWire(time=1633.927, Event(send1,0,1626.477), Event(ack1,0,1630.784))

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE logView SYSTEM "logView.dtd">
+
+<logView>
+<display>
+   <timeAxis start="0" end="150" xSize="80"/>
+   
+   <processAxis ySize="80"/>
+   <window  xSize="600" ySize="400"/> 
+   <process id="1" name="Chief" display="true"/> 
+     <process id="2" name="Bang" display="false"/> 
+   <messages type="1226" color="#0000ff"/>
+   <messages type="SHUTDOWN" color="#0000ff"/>
+    <messages type="1225" label="I'm a message" color="orange"/>
+   <messages type="SYNC" label="Me too" color="#0000ff"/>
+   <label halign="left" valign="center" distance="50" percent="0.3"/>
+</display>
+
+<file>
+    <printer filename="example2.ps"/>    
+    <log filename="example2.log"/>
+    <log filename="example2b.log"/>
+</file>
+</logView>

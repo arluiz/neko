@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- This DTD has been created to validate configuration files of LogView -->
+
+
+<!-- ********************* Element declarations ********************* -->
+<!-- Element logView contains all other elements, display and file -->
+<!ELEMENT logView (display?, file)>
+
+<!-- Element display contains elements that determine how the diagram is displayed
+     either on screen or on paper (postscript file) -->
+<!ELEMENT display (timeAxis?, processAxis?, window?, process*, messages*,label?)>
+
+<!-- Element time Axis describes the axis of time displayed ont the diagram, see its attributes -->
+<!ELEMENT timeAxis (#PCDATA)>
+
+<!-- Element process Axis describes the axis of process, see its attributes -->
+<!ELEMENT processAxis (#PCDATA)>
+
+<!-- Element window describes the size of the window in which the result appears, see its attributes -->
+<!ELEMENT window (#PCDATA)>
+
+<!-- Element process describe some characteristics of a process, see its attributes. This
+     element can appear one or more time in the xml -->
+<!ELEMENT process (#PCDATA)>
+
+<!-- Element messages describes the characteristics of one type of message.
+     It is possible to select a set of messages with this tag.See its attributes. This
+     element can appear one or more time in the xml -->
+<!ELEMENT messages (#PCDATA)>
+
+<!-- Element label specifies the name we attributes to some messages, see its attributes -->
+<!ELEMENT label (#PCDATA)>
+
+<!-- Element fil contains elements that deals with file reading or file printing-->
+<!ELEMENT file (printer?, log+)>
+
+<!-- Element printer descirbes the printer file, see its attributes. This element can appear once
+     or not at all. -->
+<!ELEMENT printer (#PCDATA)>
+
+<!-- Element log describes a file, see its attributes. This element can appear one or more time. -->
+<!ELEMENT log (#PCDATA)>
+
+
+
+<!-- ********************* Attribute declarations ********************* --> 
+<!-- In all the description that follow, a pixel correspond to  approximatively to 1/72 inch -->
+
+<!-- Attribute of TimeAxis start describes the start time of this axis -->
+<!ATTLIST timeAxis start CDATA #IMPLIED>
+
+<!-- Attribute of TimeAxis end describes the end time of this axis -->
+<!ATTLIST timeAxis end CDATA #IMPLIED>
+
+<!-- Attribute of TimeAxis xSize describes the number of pixel for one millisecond -->
+<!ATTLIST timeAxis xSize CDATA #IMPLIED>
+
+<!-- Attribute of ProcessAxis ySize describes the number of pixel betweem two lines of process -->
+<!ATTLIST processAxis ySize CDATA #IMPLIED>  
+
+<!-- Attribute of Window xSize descirbes the width of the window -->
+<!ATTLIST window xSize CDATA "600">
+
+<!-- Attribute of Window xSize descirbes the height of the window -->
+<!ATTLIST window ySize CDATA "400">
+
+<!-- Attribute of Process id describes the number of the process -->
+<!ATTLIST process id CDATA #REQUIRED>
+
+<!-- Attribute of Process name describes the name we want to put on the process -->
+<!ATTLIST process name CDATA #IMPLIED>
+
+<!-- Attribute of Process display describes if process is displayed or not -->
+<!ATTLIST process display (true|false) "true">
+
+<!-- Attribute of Message type describes the type of the process to identify -->
+<!ATTLIST messages type CDATA #REQUIRED>
+
+<!-- Attribute of Message label describes the label of the process to set -->
+<!ATTLIST messages label CDATA #IMPLIED>
+
+<!-- Attribute of Message src describes the source of the process to identify -->
+<!ATTLIST messages src CDATA #IMPLIED>
+
+<!-- Attribute of Message dest describes the destinations of the process to identify, can be several -->
+<!ATTLIST messages dest CDATA #IMPLIED>
+
+<!-- Attribute of Message color describes the color we want to set for this message -->
+<!ATTLIST messages color CDATA  "black">
+
+<!-- Attribute of Label halign defines the horizontal position of the label, can be left, center of right -->
+<!ATTLIST label halign (left|center|right) "center">
+
+<!-- Attribute of Label valign defines the vertical position of the label, can be top, center of bottom -->
+<!ATTLIST label valign (top|center|bottom) "bottom">
+
+<!-- Attribut of Label distance defines the distance between the arrow and the label -->
+<!ATTLIST label distance CDATA "10">
+
+<!-- Attribute of Label percent defines the position in percent of the label along the arrow -->
+<!ATTLIST label percent CDATA "50">
+
+<!-- Attribute of Printer name defines the name to give to the postscript output file -->
+<!ATTLIST printer filename CDATA #REQUIRED>
+
+<!-- Attribute of Log name defines the name of the neko traces file to be read -->
+<!ATTLIST log filename CDATA #REQUIRED>
