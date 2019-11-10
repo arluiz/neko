@@ -1,0 +1,2 @@
+java lse.neko.comm.Config testConfig.config |\
+diff - testConfig.output
