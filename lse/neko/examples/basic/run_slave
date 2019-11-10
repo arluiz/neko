@@ -1,0 +1,8 @@
+#!/bin/sh
+
+# Runs the slave component of Neko.
+# Needed when the application executes over the network.
+# See run_master.
+
+java "$@" lse.neko.comm.Slave
+

@@ -1,0 +1,10 @@
+#!/bin/sh
+
+# Starts the master component of Neko with a configuration file.
+# Needed when the application executes over the network.
+# Start the run_slave components first.
+# See run_slave and onNetwork.config.
+
+java lse.neko.Main onNetwork.config
+
+

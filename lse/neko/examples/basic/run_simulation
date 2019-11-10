@@ -1,0 +1,7 @@
+#!/bin/sh
+
+# Starts a Neko simulation.
+# See the configuration file simulation.config.
+
+java lse.neko.Main simulation.config
+
